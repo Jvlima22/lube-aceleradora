@@ -1,0 +1,10 @@
+h {
+  font-style: italic;
+  color: #fcd200;
+}
+header.scrolling #header-content {
+  background-color: rgba(17, 17, 17, 0.64);
+}
+* {
+  scroll-behavior: smooth !important;
+}
