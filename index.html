@@ -140,7 +140,7 @@
          	j.async = true;
          	j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
          	f.parentNode.insertBefore( j, f );
-         } )( window, document, 'script', 'dataLayer', 'GTM-PGJTJ49Q' );
+         } )( window, document, 'script', 'dataLayer', 'GTM-NNB4XBJ8' );
          
       </script>
       <!-- Finalizar o snippet do Gerenciador de Tags do Google adicionado pelo Site Kit -->
@@ -2345,7 +2345,7 @@
       </script>
       <!-- Snippet do Gerenciador de Etiqueta do Google (noscript) adicionado pelo Site Kit -->
       <noscript>
-         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGJTJ49Q"
+         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNB4XBJ8"
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
       </noscript>
       <!-- Finalizar o snippet do Gerenciador de Tags do Google (noscript) adicionado pelo Site Kit -->
@@ -2391,17 +2391,18 @@
               if (loadingSpan) loadingSpan.style.display = 'inline-block';
               if (submitBtn) submitBtn.disabled = true;
 
-              const nome = form.querySelector('[aria-label="Nome"]')?.value || '';
-              const telefone = form.querySelector('[aria-label="Telefone"]')?.value || '';
-              const email = form.querySelector('[aria-label="email"]')?.value || '';
-              const segmento = form.querySelector('[aria-label="segmento"]')?.value || '';
-              const site_instagram = form.querySelector('[aria-label="Site ou instagram do seu négocio"]')?.value || '';
-              const faturamento = form.querySelector('[aria-label="Qual o seu faturamento mensal?"]')?.value || '';
-              const investimento = form.querySelector('[aria-label="Qual o valor que você tem disponível para investir todo mês?"]')?.value || '';
-              const dificuldade = form.querySelector('[aria-label="Qual sua maior dificuldade hoje?"]')?.value || '';
+              const nome = form.querySelector('[aria-label="Nome"]')?.value.trim() || '';
+              const telefone = form.querySelector('[aria-label="Telefone"]')?.value.trim() || '';
+              const email = form.querySelector('[aria-label="email"]')?.value.trim() || '';
+              const segmento = form.querySelector('[aria-label="segmento"]')?.value.trim() || '';
+              const site_instagram = form.querySelector('[aria-label="Site ou instagram do seu négocio"]')?.value.trim() || '';
+              const faturamento = form.querySelector('[aria-label="Qual o seu faturamento mensal?"]')?.value.trim() || '';
+              const investimento = form.querySelector('[aria-label="Qual o valor que você tem disponível para investir todo mês?"]')?.value.trim() || '';
+              const dificuldade = form.querySelector('[aria-label="Qual sua maior dificuldade hoje?"]')?.value.trim() || '';
 
-              if (!nome || !telefone || !email) {
-                alert('Por favor, preencha todos os campos obrigatórios.');
+              // Validação: todos os campos devem ser preenchidos
+              if (!nome || !telefone || !email || !segmento || !site_instagram || !faturamento || !investimento || !dificuldade) {
+                alert('Por favor, preencha todos os campos para enviar o formulário.');
                 if (loadingSpan) loadingSpan.style.display = 'none';
                 if (submitBtn) submitBtn.disabled = false;
                 return;
@@ -2412,47 +2413,45 @@
                 .from('leads')
                 .insert([{ nome, telefone, email, segmento, site_instagram, faturamento, investimento, dificuldade }]);
 
-                  console.log('Resposta do Supabase:', error);
-    if (loadingSpan) loadingSpan.style.display = 'none';
-    if (submitBtn) submitBtn.disabled = false;
-    if (error) {
-      alert('Erro ao enviar! Tente novamente.');
-    } else {
-      alert('Enviado com sucesso!');
-      form.reset();
-      
-      // Enviar para WhatsApp
-      const now = new Date();
-      const dataHora = now.toLocaleString('pt-BR', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit'
-      });
-      
-      const whatsappMessage = `🚀 *NOVO LEAD RECEBIDO!*
-📅 *Data/Hora:* ${dataHora}
+              console.log('Resposta do Supabase:', error);
+              if (loadingSpan) loadingSpan.style.display = 'none';
+              if (submitBtn) submitBtn.disabled = false;
+              if (error) {
+                alert('Erro ao enviar! Tente novamente.');
+              } else {
+                alert('Enviado com sucesso!');
+                form.reset();
 
-*Nome:* ${nome}
-*Telefone:* ${telefone}
-*Email:* ${email}
-*Segmento:* ${segmento}
-*Site/Instagram:* ${site_instagram}
-*Faturamento:* ${faturamento}
-*Investimento:* ${investimento}
-*Maior Dificuldade:* ${dificuldade}
+                // Disparar evento para o Google Tag Manager
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                  'event': 'formSubmission',
+                  'formName': 'LeadLube',
+                  'formFields': {
+                    nome, telefone, email, segmento, site_instagram, faturamento, investimento, dificuldade
+                  }
+                });
 
-_Enviado via formulário do site_`;
-      
-      const whatsappNumber = '5511993561444'; // Seu número do WhatsApp
-      const encodedMessage = encodeURIComponent(whatsappMessage);
-      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-      
-      // Abre o WhatsApp em nova aba
-      window.open(whatsappUrl, '_blank');
-    }
+                // Enviar para WhatsApp
+                const now = new Date();
+                const dataHora = now.toLocaleString('pt-BR', {
+                  day: '2-digit',
+                  month: '2-digit',
+                  year: 'numeric',
+                  hour: '2-digit',
+                  minute: '2-digit',
+                  second: '2-digit'
+                });
+
+                const whatsappMessage = `🚀 *NOVO LEAD RECEBIDO!*\n📅 *Data/Hora:* ${dataHora}\n\n*Nome:* ${nome}\n*Telefone:* ${telefone}\n*Email:* ${email}\n*Segmento:* ${segmento}\n*Site/Instagram:* ${site_instagram}\n*Faturamento:* ${faturamento}\n*Investimento:* ${investimento}\n*Maior Dificuldade:* ${dificuldade}\n\n_Enviado via formulário do site_`;
+
+                const whatsappNumber = '5511993561444'; // Seu número do WhatsApp
+                const encodedMessage = encodeURIComponent(whatsappMessage);
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+                // Abre o WhatsApp em nova aba
+                window.open(whatsappUrl, '_blank');
+              }
             });
           } else {
             console.log('Formulário #brxe-pysnca não encontrado no DOM!');
