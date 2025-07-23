@@ -2467,7 +2467,13 @@
                 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
                 // Abre o WhatsApp em nova aba
-                window.open(whatsappUrl, '_blank');
+                if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                  // Mobile: redireciona a página
+                  window.location.href = whatsappUrl;
+                } else {
+                  // Desktop: abre nova aba
+                  window.open(whatsappUrl, '_blank');
+                }
               }
             });
           } else {
