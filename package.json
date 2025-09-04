@@ -1,0 +1,17 @@
+{
+  "name": "lube-aceleradora",
+  "version": "1.0.0",
+  "description": "Site da Lube Aceleradora",
+  "main": "index.html",
+  "scripts": {
+    "build": "node inject-env.js",
+    "start": "npx serve ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

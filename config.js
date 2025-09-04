@@ -1,6 +1,4 @@
-// config.example.js - Arquivo de exemplo
-// Copie este arquivo para config.js e preencha com suas credenciais
-
+// Configuração da aplicação
 window.APP_CONFIG = {
   SUPABASE_URL: "https://cnyowhlgntkgkplwgwkd.supabase.co",
   SUPABASE_ANON_KEY:

@@ -457,9 +457,9 @@
       </div>
     </section>
 
-	<section id="hero-3" class="brxe-section bricks-lazy-hidden" style="background-color: #111111 !important; ">
+	<section id="hero-3" class="brxe-section bricks-lazy-hidden" style="background-color: #111111 !important;">
 		<div id="brxe-wrxzwv" class="brxe-container bricks-lazy-hidden">
-			<div style="display: flex; gap: 60px; align-items: flex-start; margin-top: 70px; flex-wrap: wrap;">
+			<div style="display: flex; gap: 60px; align-items: flex-start; margin-top: 20px !important; flex-wrap: wrap;">
 				<!-- Coluna da esquerda - Textos e Botão -->
 					<div id="brxe-gbkejr" class="brxe-block bricks-lazy-hidden">
 						<div id="brxe-eqfgcv" class="brxe-block bricks-lazy-hidden">
@@ -475,7 +475,7 @@
 			</div>
 				
 				<!-- Coluna da direita - Vídeo -->
-				<div style="flex: 1; min-width: 300px; max-width: 560px; margin-top: 80px !important;">
+				<div style="flex: 1; min-width: 300px; max-width: 560px;">
 					<div id="youtube-video-card" style="width: 100%;">
 						<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; box-shadow:0 2px 16px rgba(0,0,0,0.12);">
 							<iframe id="youtube-iframe"
@@ -1958,10 +1958,22 @@
 	// O arquivo config.js está no .gitignore para não ser commitado
 	// As credenciais ainda são visíveis no frontend (limitação de sites estáticos)
 	document.addEventListener('DOMContentLoaded', function() {
-	  // Verifica se a configuração foi carregada
-	  if (!window.APP_CONFIG) {
-		console.error('Arquivo de configuração (config.js) não foi carregado!');
-		alert('Erro de configuração. Verifique se o arquivo config.js está presente.');
+	  // Configuração com fallback para variáveis de ambiente (Netlify)
+	  let config = window.APP_CONFIG || {};
+	  
+	  // Se não há configuração local, tenta usar variáveis de ambiente (Netlify)
+	  if (!config.SUPABASE_URL || !config.SUPABASE_ANON_KEY) {
+		config = {
+		  SUPABASE_URL: window.SUPABASE_URL || 'https://cnyowhlgntkgkplwgwkd.supabase.co',
+		  SUPABASE_ANON_KEY: window.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNueW93aGxnbnRrZ2twbHdnd2tkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI3ODQzODIsImV4cCI6MjA2ODM2MDM4Mn0.1YPIt8ebrOOiuICFaf3PfW7bTz2tG7zJk05U9FBl0Ac',
+		  WHATSAPP_NUMBER: window.WHATSAPP_NUMBER || '5511993561444'
+		};
+	  }
+	  
+	  // Verifica se a configuração está completa
+	  if (!config.SUPABASE_URL || !config.SUPABASE_ANON_KEY) {
+		console.error('Configuração incompleta! Verifique as variáveis de ambiente ou o arquivo config.js');
+		alert('Erro de configuração. Verifique se o arquivo config.js está presente ou as variáveis de ambiente estão configuradas.');
 		return;
 	  }
 	  
@@ -1973,15 +1985,8 @@
 	  
 	  // CONFIGURAÇÃO DO SUPABASE
 	  // Nota: A chave anônima é segura para uso público quando combinada com RLS
-	  const SUPABASE_URL = window.APP_CONFIG.SUPABASE_URL;
-	  const SUPABASE_ANON_KEY = window.APP_CONFIG.SUPABASE_ANON_KEY;
-	  
-	  // Validação das credenciais
-	  if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-		console.error('Credenciais do Supabase não configuradas corretamente!');
-		alert('Erro de configuração. Verifique as credenciais no arquivo config.js');
-		return;
-	  }
+	  const SUPABASE_URL = config.SUPABASE_URL;
+	  const SUPABASE_ANON_KEY = config.SUPABASE_ANON_KEY;
 	  
 	  const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   
@@ -2060,7 +2065,7 @@
   
 			const whatsappMessage = `�� *NOVO LEAD RECEBIDO!*\n📅 *Data/Hora:* ${dataHora}\n\n*Nome:* ${nome}\n*Email:* ${email}\n*Telefone:* ${telefone}\n*Faturamento:* ${faturamento}\n*Segmento:* ${segmento}\n\n_Enviado via formulário do site_`;
   
-			const whatsappNumber = window.APP_CONFIG.WHATSAPP_NUMBER;
+			const whatsappNumber = config.WHATSAPP_NUMBER;
 			
 			// Validação do número do WhatsApp
 			if (!whatsappNumber) {

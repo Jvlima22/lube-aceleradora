@@ -1064,6 +1064,13 @@ p[id="brxe-dxhcqu"] {
   }
 }
 
+/* Reduzir margin-top da div do vídeo em dispositivos móveis */
+@media (max-width: 767px) {
+  div[style*="margin-top: 80px !important"] {
+    margin-top: -40px !important;
+  }
+}
+
 /* Nova estilização exclusiva para o parágrafo expandido */
 /* Centralização automática para largura maior que 100% */
 .lube-teste-unico-wrapper {

@@ -1,5 +1,5 @@
 # Arquivos de configuração sensíveis
-config.js
+# config.js - removido para permitir deploy na Netlify
 
 # Arquivos de ambiente (se usar no futuro)
 .env
