@@ -1051,9 +1051,14 @@ p[id="brxe-dxhcqu"] {
   }
 }
 #brxe-fnjwlt {
-  font-size: 30px !important;
+  font-size: 50px !important;
 }
 @media (max-width: 767px) {
+  #brxe-fnjwlt {
+    font-size: 30px !important;
+  }
+}
+@media (max-width: 478px) {
   #brxe-fnjwlt {
     font-size: 18px !important;
   }
