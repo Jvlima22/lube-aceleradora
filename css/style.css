@@ -1022,18 +1022,6 @@ body[data-image-editor-theme="dark"] .pintura-editor {
   gap: 5px;
 }
 
-.cta-header--boxText {
-  background-color: #05c04f !important;
-}
-.cta-header--Text {
-  color: #fff !important;
-}
-
-.bricks-button {
-  background-color: #05c04f !important;
-  color: #111 !important;
-}
-
 /* Exibe logo desktop por padrão, esconde logo mobile */
 .logo-desktop {
   display: block;
@@ -1052,43 +1040,10 @@ body[data-image-editor-theme="dark"] .pintura-editor {
     margin: 0 auto;
   }
 }
-
-@media (max-width: 767px) {
-  #hero-2 {
-    padding-bottom: 0 !important;
-    min-height: 0 !important;
-    height: auto !important;
-  }
-  .hero-mobile-bg-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    min-width: 100vw;
-    height: 100%;
-    z-index: 1;
-    overflow: hidden;
-    pointer-events: none;
-  }
-  .hero-bg-mobile {
-    width: 100vw;
-    min-width: 100vw;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.7;
-    display: block;
-  }
-  body,
-  html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-}
-
 /* Ajuste de fonte para os textos do hero com id brxe-dxhcqu */
 p[id="brxe-dxhcqu"] {
   font-size: 18px !important;
+  padding-top: 10px !important;
 }
 @media (max-width: 478px) {
   p[id="brxe-dxhcqu"] {
@@ -1130,9 +1085,7 @@ p[id="brxe-dxhcqu"] {
     font-size: 14px !important;
   }
 }
-.lube-teste-unico {
-  /* Copie aqui estilos adicionais desejados das classes antigas, se necessário */
-}
+/* .lube-teste-unico - estilos adicionais podem ser adicionados aqui se necessário */
 @media (max-width: 478px) {
   .card-beneficio--boxTitle.brxe-block {
     flex-direction: row !important;
@@ -1228,5 +1181,94 @@ p[id="brxe-dxhcqu"] {
 @media (max-width: 767px) {
   #hero-2 .cta-primary {
     margin-bottom: 32px !important;
+  }
+  .hero-mobile-bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-width: 100vw;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .hero-bg-mobile {
+    width: 100vw;
+    min-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    display: block;
+  }
+}
+
+section#hero.brxe-section {
+  min-height: 100vh !important;
+  min-height: 100dvh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+/* Ajustes responsivos específicos para a section hero */
+@media (max-width: 767px) {
+  section#hero.brxe-section {
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+  }
+}
+
+@media (max-width: 478px) {
+  section#hero.brxe-section {
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+  }
+}
+
+/* Suporte para navegadores com 100dvh */
+@supports (height: 100dvh) {
+  section#hero.brxe-section {
+    min-height: 100dvh !important;
+  }
+}
+
+@supports not (height: 100dvh) {
+  section#hero.brxe-section {
+    min-height: 100vh !important;
+  }
+}
+
+/* Imagem de fundo para dispositivos móveis na seção hero - posicionada atrás da imagem hero-mobile */
+@media (max-width: 768px) {
+  section#hero.brxe-section {
+    background-image: url("../images/hero-bg-extra.png") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    position: relative !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Garantir que a imagem hero-mobile fique na frente do background e seja exibida apenas no mobile */
+  section#hero.brxe-section .hero-mobile-img {
+    position: relative !important;
+    z-index: 2 !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+/* Esconder a imagem hero-mobile em desktop */
+@media (min-width: 769px) {
+  section#hero.brxe-section .hero-mobile-img {
+    display: none !important;
   }
 }

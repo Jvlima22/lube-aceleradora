@@ -806,7 +806,8 @@ svg.brxe-icon {
   width: var(--brxe-toggle-bar-width);
 }
 .brxe-text-link {
-  font-size: 2em !important;
+  gap: 5px;
+  vertical-align: middle;
 }
 .brxe-text-link,
 .brxe-text-link span {
@@ -1146,7 +1147,6 @@ figure.brxe-image {
 }
 #brxe-jrntyr {
   color: rgba(255, 255, 255, 0.81);
-  margin-left: -50px;
 }
 @media (max-width: 991px) {
   #brxe-jrntyr {
