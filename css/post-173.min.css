@@ -1,0 +1,1170 @@
+.brxe-icon {
+  font-size: 60px;
+}
+svg.brxe-icon {
+  font-size: inherit;
+}
+:where(.brxe-heading).has-separator {
+  align-items: center;
+  display: inline-flex;
+  gap: 20px;
+}
+:where(.brxe-heading) > [contenteditable] {
+  display: inline-block;
+  text-decoration: inherit;
+}
+:where(.brxe-heading) .separator {
+  border-top: 1px solid;
+  flex-grow: 1;
+  flex-shrink: 0;
+  height: 1px;
+}
+.brxe-toggle {
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  transition-duration: 0.15s;
+  transition-property: opacity, filter;
+  transition-timing-function: linear;
+}
+.brxa-wrap {
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  width: 40px;
+}
+.brxa-inner {
+  display: block;
+  margin-top: -2px;
+  top: 50%;
+}
+.brxa-inner,
+.brxa-inner:after,
+.brxa-inner:before {
+  background-color: currentcolor;
+  border-radius: 4px;
+  height: 4px;
+  position: absolute;
+  transition-duration: 0.15s;
+  transition-property: transform;
+  transition-timing-function: ease;
+  width: 40px;
+}
+.brxa-inner:after,
+.brxa-inner:before {
+  content: "";
+  display: block;
+}
+.brxa-inner:before {
+  top: -10px;
+}
+.brxa-inner:after {
+  bottom: -10px;
+}
+.brxa--3dx-r .brxa-wrap {
+  perspective: 80px;
+}
+.brxa--3dx-r .brxa-inner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+    background-color 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+.brxa--3dx-r .brxa-inner:after,
+.brxa--3dx-r .brxa-inner:before {
+  transition: transform 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+.brxa--3dx-r.is-active .brxa-inner {
+  background-color: transparent !important;
+  transform: rotateY(-180deg);
+}
+.brxa--3dx-r.is-active .brxa-inner:before {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+.brxa--3dx-r.is-active .brxa-inner:after {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+.brxa--3dx .brxa-wrap {
+  perspective: 80px;
+}
+.brxa--3dx .brxa-inner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+    background-color 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+.brxa--3dx .brxa-inner:after,
+.brxa--3dx .brxa-inner:before {
+  transition: transform 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+.brxa--3dx.is-active .brxa-inner {
+  background-color: transparent !important;
+  transform: rotateY(180deg);
+}
+.brxa--3dx.is-active .brxa-inner:before {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+.brxa--3dx.is-active .brxa-inner:after {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+.brxa--3dy-r .brxa-wrap {
+  perspective: 80px;
+}
+.brxa--3dy-r .brxa-inner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+    background-color 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+.brxa--3dy-r .brxa-inner:after,
+.brxa--3dy-r .brxa-inner:before {
+  transition: transform 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+.brxa--3dy-r.is-active .brxa-inner {
+  background-color: transparent !important;
+  transform: rotateX(180deg);
+}
+.brxa--3dy-r.is-active .brxa-inner:before {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+.brxa--3dy-r.is-active .brxa-inner:after {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+.brxa--3dy .brxa-wrap {
+  perspective: 80px;
+}
+.brxa--3dy .brxa-inner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+    background-color 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+.brxa--3dy .brxa-inner:after,
+.brxa--3dy .brxa-inner:before {
+  transition: transform 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+.brxa--3dy.is-active .brxa-inner {
+  background-color: transparent !important;
+  transform: rotateX(-180deg);
+}
+.brxa--3dy.is-active .brxa-inner:before {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+.brxa--3dy.is-active .brxa-inner:after {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+.brxa--3dxy-r .brxa-wrap {
+  perspective: 80px;
+}
+.brxa--3dxy-r .brxa-inner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+    background-color 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+.brxa--3dxy-r .brxa-inner:after,
+.brxa--3dxy-r .brxa-inner:before {
+  transition: transform 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+.brxa--3dxy-r.is-active .brxa-inner {
+  background-color: transparent !important;
+  transform: rotateX(180deg) rotateY(180deg) rotate(-180deg);
+}
+.brxa--3dxy-r.is-active .brxa-inner:before {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+.brxa--3dxy-r.is-active .brxa-inner:after {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+.brxa--3dxy .brxa-wrap {
+  perspective: 80px;
+}
+.brxa--3dxy .brxa-inner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+    background-color 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+.brxa--3dxy .brxa-inner:after,
+.brxa--3dxy .brxa-inner:before {
+  transition: transform 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+.brxa--3dxy.is-active .brxa-inner {
+  background-color: transparent !important;
+  transform: rotateX(180deg) rotateY(180deg);
+}
+.brxa--3dxy.is-active .brxa-inner:before {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+.brxa--3dxy.is-active .brxa-inner:after {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+}
+.brxa--arrow-r.is-active .brxa-inner:before {
+  transform: translate3d(8px, 0, 0) rotate(45deg) scaleX(0.7);
+}
+.brxa--arrow-r.is-active .brxa-inner:after {
+  transform: translate3d(8px, 0, 0) rotate(-45deg) scaleX(0.7);
+}
+.brxa--arrow.is-active .brxa-inner:before {
+  transform: translate3d(-8px, 0, 0) rotate(-45deg) scaleX(0.7);
+}
+.brxa--arrow.is-active .brxa-inner:after {
+  transform: translate3d(-8px, 0, 0) rotate(45deg) scaleX(0.7);
+}
+.brxa--arrowalt-r .brxa-inner:before {
+  transition: top 0.1s ease 0.1s,
+    transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.brxa--arrowalt-r .brxa-inner:after {
+  transition: bottom 0.1s ease 0.1s,
+    transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.brxa--arrowalt-r.is-active .brxa-inner:before {
+  top: 0;
+  transform: translate3d(8px, -10px, 0) rotate(45deg) scaleX(0.7);
+  transition: top 0.1s ease,
+    transform 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.1s;
+}
+.brxa--arrowalt-r.is-active .brxa-inner:after {
+  bottom: 0;
+  transform: translate3d(8px, 10px, 0) rotate(-45deg) scaleX(0.7);
+  transition: bottom 0.1s ease,
+    transform 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.1s;
+}
+.brxa--arrowalt .brxa-inner:before {
+  transition: top 0.1s ease 0.1s,
+    transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.brxa--arrowalt .brxa-inner:after {
+  transition: bottom 0.1s ease 0.1s,
+    transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.brxa--arrowalt.is-active .brxa-inner:before {
+  top: 0;
+  transform: translate3d(-8px, -10px, 0) rotate(-45deg) scaleX(0.7);
+  transition: top 0.1s ease,
+    transform 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.1s;
+}
+.brxa--arrowalt.is-active .brxa-inner:after {
+  bottom: 0;
+  transform: translate3d(-8px, 10px, 0) rotate(45deg) scaleX(0.7);
+  transition: bottom 0.1s ease,
+    transform 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.1s;
+}
+.brxa--arrowturn-r.is-active .brxa-inner {
+  transform: rotate(-180deg);
+}
+.brxa--arrowturn-r.is-active .brxa-inner:before {
+  transform: translate3d(-8px, 0, 0) rotate(-45deg) scaleX(0.7);
+}
+.brxa--arrowturn-r.is-active .brxa-inner:after {
+  transform: translate3d(-8px, 0, 0) rotate(45deg) scaleX(0.7);
+}
+.brxa--arrowturn.is-active .brxa-inner {
+  transform: rotate(-180deg);
+}
+.brxa--arrowturn.is-active .brxa-inner:before {
+  transform: translate3d(8px, 0, 0) rotate(45deg) scaleX(0.7);
+}
+.brxa--arrowturn.is-active .brxa-inner:after {
+  transform: translate3d(8px, 0, 0) rotate(-45deg) scaleX(0.7);
+}
+.brxa--boring .brxa-inner,
+.brxa--boring .brxa-inner:after,
+.brxa--boring .brxa-inner:before {
+  transition-property: none;
+}
+.brxa--boring.is-active .brxa-inner {
+  transform: rotate(45deg);
+}
+.brxa--boring.is-active .brxa-inner:before {
+  opacity: 0;
+  top: 0;
+}
+.brxa--boring.is-active .brxa-inner:after {
+  bottom: 0;
+  transform: rotate(-90deg);
+}
+.brxa--collapse-r .brxa-inner {
+  bottom: 0;
+  top: auto;
+  transition-delay: 0.13s;
+  transition-duration: 0.13s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.brxa--collapse-r .brxa-inner:after {
+  top: -20px;
+  transition: top 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s,
+    opacity 0.1s linear;
+}
+.brxa--collapse-r .brxa-inner:before {
+  transition: top 0.12s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s,
+    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.brxa--collapse-r.is-active .brxa-inner {
+  transform: translate3d(0, -10px, 0) rotate(45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.brxa--collapse-r.is-active .brxa-inner:after {
+  opacity: 0;
+  top: 0;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+    opacity 0.1s linear 0.22s;
+}
+.brxa--collapse-r.is-active .brxa-inner:before {
+  top: 0;
+  transform: rotate(90deg);
+  transition: top 0.1s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0.16s,
+    transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.25s;
+}
+.brxa--collapse .brxa-inner {
+  bottom: 0;
+  top: auto;
+  transition-delay: 0.13s;
+  transition-duration: 0.13s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.brxa--collapse .brxa-inner:after {
+  top: -20px;
+  transition: top 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s,
+    opacity 0.1s linear;
+}
+.brxa--collapse .brxa-inner:before {
+  transition: top 0.12s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s,
+    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.brxa--collapse.is-active .brxa-inner {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.brxa--collapse.is-active .brxa-inner:after {
+  opacity: 0;
+  top: 0;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+    opacity 0.1s linear 0.22s;
+}
+.brxa--collapse.is-active .brxa-inner:before {
+  top: 0;
+  transform: rotate(-90deg);
+  transition: top 0.1s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0.16s,
+    transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.25s;
+}
+.brxa--elastic-r .brxa-inner {
+  top: 2px;
+  transition-duration: 0.275s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.brxa--elastic-r .brxa-inner:before {
+  top: 10px;
+  transition: opacity 0.125s ease 0.275s;
+}
+.brxa--elastic-r .brxa-inner:after {
+  top: 20px;
+  transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.brxa--elastic-r.is-active .brxa-inner {
+  transform: translate3d(0, 10px, 0) rotate(-135deg);
+  transition-delay: 75ms;
+}
+.brxa--elastic-r.is-active .brxa-inner:before {
+  opacity: 0;
+  transition-delay: 0s;
+}
+.brxa--elastic-r.is-active .brxa-inner:after {
+  transform: translate3d(0, -20px, 0) rotate(270deg);
+  transition-delay: 75ms;
+}
+.brxa--elastic .brxa-inner {
+  top: 2px;
+  transition-duration: 0.275s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.brxa--elastic .brxa-inner:before {
+  top: 10px;
+  transition: opacity 0.125s ease 0.275s;
+}
+.brxa--elastic .brxa-inner:after {
+  top: 20px;
+  transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.brxa--elastic.is-active .brxa-inner {
+  transform: translate3d(0, 10px, 0) rotate(135deg);
+  transition-delay: 75ms;
+}
+.brxa--elastic.is-active .brxa-inner:before {
+  opacity: 0;
+  transition-delay: 0s;
+}
+.brxa--elastic.is-active .brxa-inner:after {
+  transform: translate3d(0, -20px, 0) rotate(-270deg);
+  transition-delay: 75ms;
+}
+.brxa--emphatic-r .brxa-inner {
+  transition: background-color 0.125s ease-in 0.175s;
+}
+.brxa--emphatic-r .brxa-inner:before {
+  left: 0;
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+    top 0.05s linear 0.125s, left 0.125s ease-in 0.175s;
+}
+.brxa--emphatic-r .brxa-inner:after {
+  right: 0;
+  top: 10px;
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+    top 0.05s linear 0.125s, right 0.125s ease-in 0.175s;
+}
+.brxa--emphatic-r.is-active .brxa-inner {
+  background-color: transparent !important;
+  transition-delay: 0s;
+  transition-timing-function: ease-out;
+}
+.brxa--emphatic-r.is-active .brxa-inner:before {
+  left: -80px;
+  top: 80px;
+  transform: translate3d(80px, -80px, 0) rotate(-45deg);
+  transition: left 0.125s ease-out, top 0.05s linear 0.125s,
+    transform 0.125s cubic-bezier(0.075, 0.82, 0.165, 1) 0.175s;
+}
+.brxa--emphatic-r.is-active .brxa-inner:after {
+  right: -80px;
+  top: 80px;
+  transform: translate3d(-80px, -80px, 0) rotate(45deg);
+  transition: right 0.125s ease-out, top 0.05s linear 0.125s,
+    transform 0.125s cubic-bezier(0.075, 0.82, 0.165, 1) 0.175s;
+}
+.brxa--emphatic .brxa-inner {
+  transition: background-color 0.125s ease-in 0.175s;
+}
+.brxa--emphatic .brxa-inner:before {
+  left: 0;
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+    top 0.05s linear 0.125s, left 0.125s ease-in 0.175s;
+}
+.brxa--emphatic .brxa-inner:after {
+  right: 0;
+  top: 10px;
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+    top 0.05s linear 0.125s, right 0.125s ease-in 0.175s;
+}
+.brxa--emphatic.is-active .brxa-inner {
+  background-color: transparent !important;
+  transition-delay: 0s;
+  transition-timing-function: ease-out;
+}
+.brxa--emphatic.is-active .brxa-inner:before {
+  left: -80px;
+  top: -80px;
+  transform: translate3d(80px, 80px, 0) rotate(45deg);
+  transition: left 0.125s ease-out, top 0.05s linear 0.125s,
+    transform 0.125s cubic-bezier(0.075, 0.82, 0.165, 1) 0.175s;
+}
+.brxa--emphatic.is-active .brxa-inner:after {
+  right: -80px;
+  top: -80px;
+  transform: translate3d(-80px, 80px, 0) rotate(-45deg);
+  transition: right 0.125s ease-out, top 0.05s linear 0.125s,
+    transform 0.125s cubic-bezier(0.075, 0.82, 0.165, 1) 0.175s;
+}
+.brxa--minus .brxa-inner:after,
+.brxa--minus .brxa-inner:before {
+  transition: bottom 0.08s ease-out 0s, top 0.08s ease-out 0s, opacity 0s linear;
+}
+.brxa--minus.is-active .brxa-inner:after,
+.brxa--minus.is-active .brxa-inner:before {
+  opacity: 0;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s linear 0.08s;
+}
+.brxa--minus.is-active .brxa-inner:before {
+  top: 0;
+}
+.brxa--minus.is-active .brxa-inner:after {
+  bottom: 0;
+}
+.brxa--slider-r .brxa-inner {
+  top: 2px;
+}
+.brxa--slider-r .brxa-inner:before {
+  top: 10px;
+  transition-duration: 0.15s;
+  transition-property: transform, opacity;
+  transition-timing-function: ease;
+}
+.brxa--slider-r .brxa-inner:after {
+  top: 20px;
+}
+.brxa--slider-r.is-active .brxa-inner {
+  transform: translate3d(0, 10px, 0) rotate(-45deg);
+}
+.brxa--slider-r.is-active .brxa-inner:before {
+  opacity: 0;
+  transform: rotate(45deg) translate3d(5.7142857143px, -6px, 0);
+}
+.brxa--slider-r.is-active .brxa-inner:after {
+  transform: translate3d(0, -20px, 0) rotate(90deg);
+}
+.brxa--slider .brxa-inner {
+  top: 2px;
+}
+.brxa--slider .brxa-inner:before {
+  top: 10px;
+  transition-duration: 0.15s;
+  transition-property: transform, opacity;
+  transition-timing-function: ease;
+}
+.brxa--slider .brxa-inner:after {
+  top: 20px;
+}
+.brxa--slider.is-active .brxa-inner {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+.brxa--slider.is-active .brxa-inner:before {
+  opacity: 0;
+  transform: rotate(-45deg) translate3d(-5.7142857143px, -6px, 0);
+}
+.brxa--slider.is-active .brxa-inner:after {
+  transform: translate3d(0, -20px, 0) rotate(-90deg);
+}
+.brxa--spin-r .brxa-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.brxa--spin-r .brxa-inner:before {
+  transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
+}
+.brxa--spin-r .brxa-inner:after {
+  transition: bottom 0.1s ease-in 0.25s,
+    transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.brxa--spin-r.is-active .brxa-inner {
+  transform: rotate(-225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.brxa--spin-r.is-active .brxa-inner:before {
+  opacity: 0;
+  top: 0;
+  transition: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
+}
+.brxa--spin-r.is-active .brxa-inner:after {
+  bottom: 0;
+  transform: rotate(90deg);
+  transition: bottom 0.1s ease-out,
+    transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+}
+.brxa--spin .brxa-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.brxa--spin .brxa-inner:before {
+  transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
+}
+.brxa--spin .brxa-inner:after {
+  transition: bottom 0.1s ease-in 0.25s,
+    transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.brxa--spin.is-active .brxa-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.brxa--spin.is-active .brxa-inner:before {
+  opacity: 0;
+  top: 0;
+  transition: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
+}
+.brxa--spin.is-active .brxa-inner:after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out,
+    transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+}
+.brxa--spring-r .brxa-inner {
+  bottom: 0;
+  top: auto;
+  transition-delay: 0s;
+  transition-duration: 0.13s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.brxa--spring-r .brxa-inner:after {
+  top: -20px;
+  transition: top 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s,
+    opacity 0s linear;
+}
+.brxa--spring-r .brxa-inner:before {
+  transition: top 0.1s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s,
+    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.brxa--spring-r.is-active .brxa-inner {
+  transform: translate3d(0, -10px, 0) rotate(-45deg);
+  transition-delay: 0.22s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.brxa--spring-r.is-active .brxa-inner:after {
+  opacity: 0;
+  top: 0;
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+    opacity 0s linear 0.22s;
+}
+.brxa--spring-r.is-active .brxa-inner:before {
+  top: 0;
+  transform: rotate(90deg);
+  transition: top 0.1s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0.15s,
+    transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s;
+}
+.brxa--spring .brxa-inner {
+  top: 2px;
+  transition: background-color 0s linear 0.13s;
+}
+.brxa--spring .brxa-inner:before {
+  top: 10px;
+  transition: top 0.1s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s,
+    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.brxa--spring .brxa-inner:after {
+  top: 20px;
+  transition: top 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s,
+    transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.brxa--spring.is-active .brxa-inner {
+  background-color: transparent !important;
+  transition-delay: 0.22s;
+}
+.brxa--spring.is-active .brxa-inner:before {
+  top: 0;
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+  transition: top 0.1s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0.15s,
+    transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s;
+}
+.brxa--spring.is-active .brxa-inner:after {
+  top: 0;
+  transform: translate3d(0, 10px, 0) rotate(-45deg);
+  transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+    transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s;
+}
+.brxa--stand-r .brxa-inner {
+  transition: transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.15s,
+    background-color 0s linear 75ms;
+}
+.brxa--stand-r .brxa-inner:before {
+  transition: top 75ms ease-in 75ms,
+    transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
+}
+.brxa--stand-r .brxa-inner:after {
+  transition: bottom 75ms ease-in 75ms,
+    transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
+}
+.brxa--stand-r.is-active .brxa-inner {
+  background-color: transparent !important;
+  transform: rotate(-90deg);
+  transition: transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0s,
+    background-color 0s linear 0.15s;
+}
+.brxa--stand-r.is-active .brxa-inner:before {
+  top: 0;
+  transform: rotate(-45deg);
+  transition: top 75ms ease-out 0.1s,
+    transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+}
+.brxa--stand-r.is-active .brxa-inner:after {
+  bottom: 0;
+  transform: rotate(45deg);
+  transition: bottom 75ms ease-out 0.1s,
+    transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+}
+.brxa--stand .brxa-inner {
+  transition: transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.15s,
+    background-color 0s linear 75ms;
+}
+.brxa--stand .brxa-inner:before {
+  transition: top 75ms ease-in 75ms,
+    transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
+}
+.brxa--stand .brxa-inner:after {
+  transition: bottom 75ms ease-in 75ms,
+    transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
+}
+.brxa--stand.is-active .brxa-inner {
+  background-color: transparent !important;
+  transform: rotate(90deg);
+  transition: transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0s,
+    background-color 0s linear 0.15s;
+}
+.brxa--stand.is-active .brxa-inner:before {
+  top: 0;
+  transform: rotate(-45deg);
+  transition: top 75ms ease-out 0.1s,
+    transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+}
+.brxa--stand.is-active .brxa-inner:after {
+  bottom: 0;
+  transform: rotate(45deg);
+  transition: bottom 75ms ease-out 0.1s,
+    transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+}
+.brxa--squeeze .brxa-inner {
+  transition-duration: 75ms;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.brxa--squeeze .brxa-inner:before {
+  transition: top 75ms ease 0.12s, opacity 75ms ease;
+}
+.brxa--squeeze .brxa-inner:after {
+  transition: bottom 75ms ease 0.12s,
+    transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.brxa--squeeze.is-active .brxa-inner {
+  transform: rotate(45deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.brxa--squeeze.is-active .brxa-inner:before {
+  opacity: 0;
+  top: 0;
+  transition: top 75ms ease, opacity 75ms ease 0.12s;
+}
+.brxa--squeeze.is-active .brxa-inner:after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 75ms ease,
+    transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+}
+.brxa--vortex-r .brxa-inner {
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.brxa--vortex-r .brxa-inner:after,
+.brxa--vortex-r .brxa-inner:before {
+  transition-delay: 0.1s;
+  transition-duration: 0s;
+  transition-timing-function: linear;
+}
+.brxa--vortex-r .brxa-inner:before {
+  transition-property: top, opacity;
+}
+.brxa--vortex-r .brxa-inner:after {
+  transition-property: bottom, transform;
+}
+.brxa--vortex-r.is-active .brxa-inner {
+  transform: rotate(-765deg);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.brxa--vortex-r.is-active .brxa-inner:after,
+.brxa--vortex-r.is-active .brxa-inner:before {
+  transition-delay: 0s;
+}
+.brxa--vortex-r.is-active .brxa-inner:before {
+  opacity: 0;
+  top: 0;
+}
+.brxa--vortex-r.is-active .brxa-inner:after {
+  bottom: 0;
+  transform: rotate(-90deg);
+}
+.brxa--vortex .brxa-inner {
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.brxa--vortex .brxa-inner:after,
+.brxa--vortex .brxa-inner:before {
+  transition-delay: 0.1s;
+  transition-duration: 0s;
+  transition-timing-function: linear;
+}
+.brxa--vortex .brxa-inner:before {
+  transition-property: top, opacity;
+}
+.brxa--vortex .brxa-inner:after {
+  transition-property: bottom, transform;
+}
+.brxa--vortex.is-active .brxa-inner {
+  transform: rotate(765deg);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.brxa--vortex.is-active .brxa-inner:after,
+.brxa--vortex.is-active .brxa-inner:before {
+  transition-delay: 0s;
+}
+.brxa--vortex.is-active .brxa-inner:before {
+  opacity: 0;
+  top: 0;
+}
+.brxa--vortex.is-active .brxa-inner:after {
+  bottom: 0;
+  transform: rotate(90deg);
+}
+.brxe-toggle {
+  --brxe-toggle-scale: 1;
+  --brxe-toggle-width: 40px;
+  --brxe-toggle-height: 24px;
+  --brxe-toggle-bar-height: 4px;
+  --brxe-toggle-bar-width: 40px;
+  --brxe-toggle-bar-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  line-height: 1;
+  transform: scale(var(--brxe-toggle-scale));
+}
+.brxe-toggle .brxa-inner,
+.brxe-toggle .brxa-inner:after,
+.brxe-toggle .brxa-inner:before {
+  border-radius: var(--brxe-toggle-bar-radius);
+  height: var(--brxe-toggle-bar-height);
+  width: var(--brxe-toggle-bar-width);
+}
+.brxe-text-link {
+  gap: 5px;
+  vertical-align: middle;
+}
+.brxe-text-link,
+.brxe-text-link span {
+  align-items: center;
+  display: inline-flex;
+}
+.brxe-text-link span {
+  justify-content: center;
+}
+.brxe-text-link svg:not([width]) {
+  min-width: 3px;
+}
+.brxe-text-link svg:not([height]) {
+  min-height: 3px;
+}
+.brxe-nav-nested {
+  align-items: center;
+  display: inline-flex;
+}
+.brxe-nav-nested[data-toggle="always"] .brx-nav-nested-items {
+  display: none;
+}
+.brxe-nav-nested[data-toggle="always"] .brx-toggle-div,
+.brxe-nav-nested[data-toggle="always"] .brxe-toggle {
+  display: inline-flex;
+}
+.brxe-nav-nested .brx-toggle-div,
+.brxe-nav-nested .brxe-toggle {
+  display: none;
+}
+.brxe-nav-nested
+  .menu-item:has(> .brx-toggle-div:not(.is-active):not(.brx-child-node)) {
+  display: none;
+}
+.brxe-nav-nested li.brxe-text-link.menu-item {
+  display: list-item;
+}
+.brxe-nav-nested.brx-open
+  .brxe-dropdown:not([data-toggle="click"])
+  .brx-dropdown-content:after {
+  content: none;
+}
+.brxe-nav-nested.brx-open .brx-nav-nested-items {
+  align-items: stretch;
+  background-color: #fff;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+  justify-content: center;
+  left: 0;
+  overflow-y: auto;
+  position: fixed;
+  right: 0;
+  top: var(--wp-admin--admin-bar--height, 0);
+  transition-duration: 0.2s;
+  transition-property: opacity, transform, visibility;
+  transition-timing-function: ease;
+  z-index: 1001;
+}
+.brxe-nav-nested.brx-open.multilevel .brx-nav-nested-items {
+  overflow: hidden;
+}
+.brxe-nav-nested.brx-open li.menu-item a {
+  justify-content: inherit;
+  width: 100%;
+}
+.brxe-nav-nested.brx-open :where(li.menu-item.brx-toggle-div) {
+  display: block;
+}
+.brxe-nav-nested.brx-open .brx-submenu-toggle {
+  justify-content: space-between;
+}
+.brxe-nav-nested.brx-open .brxe-dropdown:hover:before {
+  content: none;
+}
+.brxe-nav-nested.brx-open .brxe-dropdown.open > .brx-dropdown-content {
+  display: flex;
+  min-width: auto;
+  opacity: 1;
+  overflow-y: auto;
+  position: static;
+  visibility: visible;
+}
+.brxe-nav-nested.brx-open .brxe-dropdown .brx-dropdown-content {
+  display: none;
+}
+.brxe-nav-nested.brx-open .brx-has-megamenu .brx-dropdown-content {
+  min-width: 0 !important;
+}
+.brxe-nav-nested.brx-closing .brx-nav-nested-items {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+.brx-nav-nested-items {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+@keyframes scrolling {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+}
+a.brxe-image {
+  display: inline-block;
+}
+figure.brxe-image {
+  margin: 0;
+}
+:where(.brxe-image).tag {
+  display: inline-block;
+  height: fit-content;
+  position: relative;
+  width: auto;
+}
+:where(.brxe-image).caption {
+  overflow: hidden;
+  position: relative;
+}
+:where(.brxe-image).overlay {
+  position: relative;
+}
+:where(.brxe-image).overlay:before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+:where(.brxe-image):before {
+  border-radius: inherit;
+}
+:where(.brxe-image) a {
+  border-radius: inherit;
+  position: static;
+  transition: inherit;
+}
+:where(.brxe-image) picture {
+  border-radius: inherit;
+  transition: inherit;
+}
+:where(.brxe-image) img {
+  border-radius: inherit;
+  height: 100%;
+  position: static !important;
+  transition: inherit;
+  width: 100%;
+}
+:where(.brxe-image) img.bricks-lazy-hidden + figcaption {
+  display: none;
+}
+:where(.brxe-image) .icon {
+  color: #fff;
+  font-size: 60px;
+  pointer-events: none;
+  position: absolute;
+  right: 50%;
+  text-align: center;
+  top: 50%;
+  transform: translate(50%, -50%);
+  z-index: 5;
+}
+:where(.brxe-image) .bricks-image-caption {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.25) 70%,
+    transparent
+  );
+  bottom: 0;
+  color: #fff;
+  font-size: inherit;
+  margin: 0;
+  padding: 10px 15px;
+  pointer-events: none;
+  position: absolute !important;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+#brxe-srzjqu {
+  width: 100%;
+  min-width: 180px;
+  max-width: 180px;
+}
+#brxe-nmfvvs {
+  justify-content: flex-start;
+  width: fit-content;
+  row-gap: 48px;
+  column-gap: 48px;
+  flex-direction: row;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+@media (max-width: 991px) {
+  #brxe-vxksbi {
+    font-size: 40px;
+    position: fixed;
+    top: 24px;
+    right: 40px;
+  }
+}
+@media (max-width: 767px) {
+  #brxe-ubnycx {
+    border-radius: 16px;
+  }
+}
+@media (max-width: 991px) {
+  #brxe-njbipm {
+    color: var(--bricks-color-bzbdqw);
+    fill: var(--bricks-color-bzbdqw);
+  }
+  #brxe-njbipm .brxa-inner {
+    --brxe-toggle-bar-height: 2px;
+  }
+}
+@media (max-width: 991px) {
+  #brxe-daxuul .brx-toggle-div {
+    display: inline-flex;
+  }
+  #brxe-daxuul .brxe-toggle {
+    display: inline-flex;
+  }
+  [data-script-id="daxuul"] .brx-nav-nested-items {
+    opacity: 0;
+    visibility: hidden;
+    gap: 0;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    overflow-y: scroll;
+    flex-wrap: nowrap;
+  }
+  #brxe-daxuul.brx-open .brx-nav-nested-items {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+#brxe-daxuul .brx-nav-nested-items {
+  gap: 32px;
+}
+#brxe-daxuul .brx-nav-nested-items > li > a {
+  font-size: 16px;
+  font-weight: 400;
+}
+#brxe-daxuul .brx-nav-nested-items > li > .brx-submenu-toggle > * {
+  font-size: 16px;
+  font-weight: 400;
+}
+#brxe-daxuul .brx-nav-nested-items > li > [aria-current="page"] {
+  color: var(--bricks-color-zpnqtu);
+}
+#brxe-daxuul .brx-nav-nested-items > li > .brx-submenu-toggle.aria-current > * {
+  color: var(--bricks-color-zpnqtu);
+}
+@media (max-width: 991px) {
+  #brxe-daxuul.brx-open .brx-nav-nested-items {
+    width: 100vw;
+    align-items: stretch;
+    justify-content: center;
+    background-color: rgba(17, 17, 17, 0.96);
+    height: 100vh;
+  }
+  #brxe-daxuul.brx-open .brx-submenu-toggle {
+    justify-content: center;
+  }
+  #brxe-daxuul.brx-open .brx-nav-nested-items > li {
+    justify-content: center;
+  }
+  #brxe-daxuul.brx-open li.menu-item {
+    display: flex;
+  }
+  #brxe-daxuul .brx-nav-nested-items > li > a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 18px;
+  }
+  #brxe-daxuul .brx-nav-nested-items > li > .brx-submenu-toggle {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  #brxe-daxuul .brx-nav-nested-items > li > .brx-submenu-toggle > * {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 18px;
+  }
+  #brxe-daxuul.brx-open .brx-nav-nested-items > li > button.brx-toggle-div {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  #brxe-daxuul .brx-nav-nested-items {
+    gap: 0px;
+  }
+}
+@media (max-width: 767px) {
+  #brxe-daxuul.brx-open .brx-nav-nested-items {
+    height: 90vh;
+  }
+}
+#brxe-jrntyr {
+  color: rgba(255, 255, 255, 0.81);
+}
+@media (max-width: 991px) {
+  #brxe-jrntyr {
+    order: 3;
+    align-items: flex-end;
+    width: fit-content;
+  }
+}
+#brxe-vivrck {
+  justify-content: center;
+  align-items: flex-end;
+  width: fit-content;
+}
+@media (max-width: 991px) {
+  #brxe-vivrck {
+    display: none;
+  }
+}
+#brxe-tcnmoa {
+  padding-top: 16px;
+}
