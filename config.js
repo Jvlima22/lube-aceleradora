@@ -1,6 +1,5 @@
-// config.js - Arquivo de configuração
-// ATENÇÃO: Este arquivo ainda será público no frontend!
-// Use apenas para chaves que podem ser expostas (como SUPABASE_ANON_KEY)
+// config.example.js - Arquivo de exemplo
+// Copie este arquivo para config.js e preencha com suas credenciais
 
 window.APP_CONFIG = {
   SUPABASE_URL: "https://cnyowhlgntkgkplwgwkd.supabase.co",
