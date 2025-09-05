@@ -6,22 +6,23 @@ O erro "Erro de configuração. Verifique se o arquivo config.js está presente.
 
 ## Solução Implementada
 
-### Configuração Inline no HTML
+### Credenciais Integradas no Código Principal
 
-- **As configurações agora estão diretamente no arquivo `index.html`** em um script inline
-- **Não há mais dependência de arquivos externos** que podem falhar no deploy
-- **Funciona tanto localmente quanto na Netlify** sem configurações adicionais
+- **As credenciais agora estão diretamente no arquivo `index.html`** como constantes JavaScript
+- **Arquivo `config.js` foi removido** - não é mais necessário
+- **Código mais simples e confiável** - sem dependências externas
 
 ### Como Funciona
 
-1. O script inline define `window.APP_CONFIG` diretamente no HTML
-2. O código JavaScript principal usa essa configuração
-3. Não há mais verificação de arquivos externos que podem falhar
+1. As credenciais são definidas como constantes no início do script principal
+2. O código usa essas constantes diretamente
+3. Não há mais verificação de arquivos externos ou objetos globais
 
 ## Arquivos Modificados
 
-- `index.html` - Configuração inline adicionada
-- `config.js` - Mantido como backup (não é mais necessário)
+- `index.html` - Credenciais integradas diretamente no código
+- `config.js` - **REMOVIDO** (não é mais necessário)
+- `.gitignore` - Atualizado para refletir as mudanças
 
 ## Deploy na Netlify
 
@@ -31,10 +32,22 @@ O erro "Erro de configuração. Verifique se o arquivo config.js está presente.
 
 ## Vantagens da Solução
 
-- ✅ **Simples e confiável** - não depende de arquivos externos
+- ✅ **Máxima simplicidade** - credenciais diretamente no código
+- ✅ **Zero dependências** - não depende de arquivos externos
 - ✅ **Funciona em qualquer ambiente** - local, Netlify, Vercel, etc.
 - ✅ **Sem configurações complexas** - apenas commit e push
-- ✅ **Sem dependências** - não precisa de Node.js ou build tools
+- ✅ **Código mais limpo** - menos arquivos para gerenciar
+
+## Estrutura Final
+
+```
+projeto/
+├── index.html (com credenciais integradas)
+├── css/
+├── js/
+├── images/
+└── .gitignore
+```
 
 ## Teste
 

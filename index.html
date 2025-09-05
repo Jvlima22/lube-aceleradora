@@ -1949,29 +1949,16 @@
   var rocket_beacon_data = {"ajax_url":"https:\/\/lombadigital.com.br\/wp-admin\/admin-ajax.php","nonce":"304ff9380c","url":"https:\/\/lombadigital.com.br","is_mobile":false,"width_threshold":1600,"height_threshold":700,"delay":500,"debug":null,"status":{"atf":true,"lrc":true,"preload_fonts":true,"preconnect_external_domain":true},"elements":"img, video, picture, p, main, div, li, svg, section, header, span","lrc_threshold":1800,"preload_fonts_exclusions":["api.fontshare.com","cdn.fontshare.com"],"processed_extensions":["woff2","woff","ttf"],"preconnect_external_domain_elements":["link","script","iframe"],"preconnect_external_domain_exclusions":["static.cloudflareinsights.com","rel=\"profile\"","rel=\"preconnect\"","rel=\"dns-prefetch\"","rel=\"icon\""]}
   </script>
   <script data-name="wpr-wpr-beacon" src="js/wpr-beacon.min.js" async=""></script>
-  <!-- Configuração da aplicação (inline para garantir funcionamento na Netlify) -->
-  <script>
-    // Configuração da aplicação (sempre disponível)
-    window.APP_CONFIG = {
-      SUPABASE_URL: "https://cnyowhlgntkgkplwgwkd.supabase.co",
-      SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNueW93aGxnbnRrZ2twbHdnd2tkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI3ODQzODIsImV4cCI6MjA2ODM2MDM4Mn0.1YPIt8ebrOOiuICFaf3PfW7bTz2tG7zJk05U9FBl0Ac",
-      WHATSAPP_NUMBER: "5511993561444"
-    };
-  </script>
+  <!-- Configuração da aplicação integrada -->
   <!-- Supabase Client -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
-	// Configuração da aplicação (sempre disponível via script inline)
+	// Configuração da aplicação integrada
 	document.addEventListener('DOMContentLoaded', function() {
-	  // Usa a configuração definida no script inline
-	  const config = window.APP_CONFIG;
-	  
-	  // Verifica se a configuração está disponível
-	  if (!config || !config.SUPABASE_URL || !config.SUPABASE_ANON_KEY) {
-		console.error('Configuração não carregada!');
-		alert('Erro de configuração. Recarregue a página.');
-		return;
-	  }
+	  // Credenciais integradas diretamente no código
+	  const SUPABASE_URL = "https://cnyowhlgntkgkplwgwkd.supabase.co";
+	  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNueW93aGxnbnRrZ2twbHdnd2tkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI3ODQzODIsImV4cCI6MjA2ODM2MDM4Mn0.1YPIt8ebrOOiuICFaf3PfW7bTz2tG7zJk05U9FBl0Ac";
+	  const WHATSAPP_NUMBER = "5511993561444";
 	  
 	  // Aguarda o carregamento da biblioteca Supabase
 	  if (typeof supabase === 'undefined' || !window.supabase) {
@@ -1981,8 +1968,6 @@
 	  
 	  // CONFIGURAÇÃO DO SUPABASE
 	  // Nota: A chave anônima é segura para uso público quando combinada com RLS
-	  const SUPABASE_URL = config.SUPABASE_URL;
-	  const SUPABASE_ANON_KEY = config.SUPABASE_ANON_KEY;
 	  
 	  const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   
@@ -2061,7 +2046,7 @@
   
 			const whatsappMessage = `�� *NOVO LEAD RECEBIDO!*\n📅 *Data/Hora:* ${dataHora}\n\n*Nome:* ${nome}\n*Email:* ${email}\n*Telefone:* ${telefone}\n*Faturamento:* ${faturamento}\n*Segmento:* ${segmento}\n\n_Enviado via formulário do site_`;
   
-			const whatsappNumber = config.WHATSAPP_NUMBER;
+			const whatsappNumber = WHATSAPP_NUMBER;
 			
 			// Validação do número do WhatsApp
 			if (!whatsappNumber) {

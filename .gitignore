@@ -1,5 +1,5 @@
 # Arquivos de configuração sensíveis
-# config.js - removido para permitir deploy na Netlify
+# config.js - removido (credenciais agora estão integradas no index.html)
 
 # Arquivos de ambiente (se usar no futuro)
 .env
