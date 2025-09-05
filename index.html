@@ -1949,31 +1949,27 @@
   var rocket_beacon_data = {"ajax_url":"https:\/\/lombadigital.com.br\/wp-admin\/admin-ajax.php","nonce":"304ff9380c","url":"https:\/\/lombadigital.com.br","is_mobile":false,"width_threshold":1600,"height_threshold":700,"delay":500,"debug":null,"status":{"atf":true,"lrc":true,"preload_fonts":true,"preconnect_external_domain":true},"elements":"img, video, picture, p, main, div, li, svg, section, header, span","lrc_threshold":1800,"preload_fonts_exclusions":["api.fontshare.com","cdn.fontshare.com"],"processed_extensions":["woff2","woff","ttf"],"preconnect_external_domain_elements":["link","script","iframe"],"preconnect_external_domain_exclusions":["static.cloudflareinsights.com","rel=\"profile\"","rel=\"preconnect\"","rel=\"dns-prefetch\"","rel=\"icon\""]}
   </script>
   <script data-name="wpr-wpr-beacon" src="js/wpr-beacon.min.js" async=""></script>
-  <!-- Configuração da aplicação -->
-  <script src="config.js"></script>
+  <!-- Configuração da aplicação (inline para garantir funcionamento na Netlify) -->
+  <script>
+    // Configuração da aplicação (sempre disponível)
+    window.APP_CONFIG = {
+      SUPABASE_URL: "https://cnyowhlgntkgkplwgwkd.supabase.co",
+      SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNueW93aGxnbnRrZ2twbHdnd2tkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI3ODQzODIsImV4cCI6MjA2ODM2MDM4Mn0.1YPIt8ebrOOiuICFaf3PfW7bTz2tG7zJk05U9FBl0Ac",
+      WHATSAPP_NUMBER: "5511993561444"
+    };
+  </script>
   <!-- Supabase Client -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
-	// SEGURANÇA: Este script usa credenciais do arquivo config.js
-	// O arquivo config.js está no .gitignore para não ser commitado
-	// As credenciais ainda são visíveis no frontend (limitação de sites estáticos)
+	// Configuração da aplicação (sempre disponível via script inline)
 	document.addEventListener('DOMContentLoaded', function() {
-	  // Configuração com fallback para variáveis de ambiente (Netlify)
-	  let config = window.APP_CONFIG || {};
+	  // Usa a configuração definida no script inline
+	  const config = window.APP_CONFIG;
 	  
-	  // Se não há configuração local, tenta usar variáveis de ambiente (Netlify)
-	  if (!config.SUPABASE_URL || !config.SUPABASE_ANON_KEY) {
-		config = {
-		  SUPABASE_URL: window.SUPABASE_URL || 'https://cnyowhlgntkgkplwgwkd.supabase.co',
-		  SUPABASE_ANON_KEY: window.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNueW93aGxnbnRrZ2twbHdnd2tkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI3ODQzODIsImV4cCI6MjA2ODM2MDM4Mn0.1YPIt8ebrOOiuICFaf3PfW7bTz2tG7zJk05U9FBl0Ac',
-		  WHATSAPP_NUMBER: window.WHATSAPP_NUMBER || '5511993561444'
-		};
-	  }
-	  
-	  // Verifica se a configuração está completa
-	  if (!config.SUPABASE_URL || !config.SUPABASE_ANON_KEY) {
-		console.error('Configuração incompleta! Verifique as variáveis de ambiente ou o arquivo config.js');
-		alert('Erro de configuração. Verifique se o arquivo config.js está presente ou as variáveis de ambiente estão configuradas.');
+	  // Verifica se a configuração está disponível
+	  if (!config || !config.SUPABASE_URL || !config.SUPABASE_ANON_KEY) {
+		console.error('Configuração não carregada!');
+		alert('Erro de configuração. Recarregue a página.');
 		return;
 	  }
 	  

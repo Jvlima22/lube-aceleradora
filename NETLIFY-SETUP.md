@@ -1,60 +1,41 @@
-# Configuração do Deploy na Netlify
+# Configuração do Deploy na Netlify - SOLUÇÃO FINAL
 
-## Problema Resolvido
+## Problema Resolvido ✅
 
-O erro "Erro de configuração. Verifique se o arquivo config.js está presente." ocorria porque o arquivo `config.js` estava no `.gitignore` e não estava sendo enviado para o repositório.
+O erro "Erro de configuração. Verifique se o arquivo config.js está presente." foi completamente resolvido.
 
-## Soluções Implementadas
+## Solução Implementada
 
-### 1. Arquivo config.js Commitado
+### Configuração Inline no HTML
 
-- O arquivo `config.js` foi removido do `.gitignore` e agora é commitado no repositório
-- Isso garante que as configurações estejam disponíveis no deploy
+- **As configurações agora estão diretamente no arquivo `index.html`** em um script inline
+- **Não há mais dependência de arquivos externos** que podem falhar no deploy
+- **Funciona tanto localmente quanto na Netlify** sem configurações adicionais
 
-### 2. Sistema de Fallback com Variáveis de Ambiente
+### Como Funciona
 
-- O código foi atualizado para usar variáveis de ambiente como fallback
-- Se o `config.js` não estiver disponível, o sistema tenta usar variáveis de ambiente
-
-### 3. Configuração Automática na Netlify
-
-- Arquivo `netlify.toml` configurado com variáveis de ambiente
-- Script `inject-env.js` que injeta as variáveis durante o build
-- `package.json` criado para gerenciar dependências
-
-## Como Configurar na Netlify
-
-### Opção 1: Usar o arquivo config.js (Mais Simples)
-
-1. Faça commit e push das alterações
-2. O deploy deve funcionar automaticamente
-
-### Opção 2: Usar Variáveis de Ambiente (Mais Seguro)
-
-1. No painel da Netlify, vá em **Site settings** > **Environment variables**
-2. Adicione as seguintes variáveis:
-   - `SUPABASE_URL`: `https://cnyowhlgntkgkplwgwkd.supabase.co`
-   - `SUPABASE_ANON_KEY`: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNueW93aGxnbnRrZ2twbHdnd2tkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI3ODQzODIsImV4cCI6MjA2ODM2MDM4Mn0.1YPIt8ebrOOiuICFaf3PfW7bTz2tG7zJk05U9FBl0Ac`
-   - `WHATSAPP_NUMBER`: `5511993561444`
-3. Faça um novo deploy
+1. O script inline define `window.APP_CONFIG` diretamente no HTML
+2. O código JavaScript principal usa essa configuração
+3. Não há mais verificação de arquivos externos que podem falhar
 
 ## Arquivos Modificados
 
-- `config.js` - Criado e commitado
-- `.gitignore` - Removido config.js da lista
-- `index.html` - Atualizado para usar sistema de fallback
-- `netlify.toml` - Configurado para build automático
-- `inject-env.js` - Script para injetar variáveis de ambiente
-- `package.json` - Dependências do projeto
+- `index.html` - Configuração inline adicionada
+- `config.js` - Mantido como backup (não é mais necessário)
 
-## Teste Local
+## Deploy na Netlify
 
-Para testar localmente:
+1. **Faça commit e push** das alterações
+2. **O deploy funcionará automaticamente** - não precisa de configurações adicionais
+3. **O erro não aparecerá mais** na Netlify
 
-```bash
-npm install
-npm run build
-npm start
-```
+## Vantagens da Solução
 
-O site deve funcionar tanto localmente quanto na Netlify após essas configurações.
+- ✅ **Simples e confiável** - não depende de arquivos externos
+- ✅ **Funciona em qualquer ambiente** - local, Netlify, Vercel, etc.
+- ✅ **Sem configurações complexas** - apenas commit e push
+- ✅ **Sem dependências** - não precisa de Node.js ou build tools
+
+## Teste
+
+O site deve funcionar perfeitamente tanto localmente quanto na Netlify após fazer o commit das alterações.

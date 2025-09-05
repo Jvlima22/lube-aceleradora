@@ -1,4 +1,5 @@
-// Configuração da aplicação
+// Configuração da aplicação (backup - não é mais necessário)
+// As configurações agora estão inline no HTML para garantir funcionamento na Netlify
 window.APP_CONFIG = {
   SUPABASE_URL: "https://cnyowhlgntkgkplwgwkd.supabase.co",
   SUPABASE_ANON_KEY:
