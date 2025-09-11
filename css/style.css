@@ -1284,3 +1284,51 @@ section#hero.brxe-section {
     display: none !important;
   }
 }
+
+/* REGRAS RESPONSIVAS PARA H1 - APENAS MOBILE */
+/* Tamanho base para desktop */
+#brxe-fnjwlt {
+  font-size: 50px;
+}
+
+/* Apenas para tablets e mobile */
+@media (max-width: 768px) {
+  #brxe-fnjwlt {
+    font-size: 35px !important;
+  }
+}
+
+/* Apenas para mobile */
+@media (max-width: 640px) {
+  #brxe-fnjwlt {
+    font-size: 28px !important;
+  }
+}
+
+/* Mobile médio */
+@media (max-width: 480px) {
+  #brxe-fnjwlt {
+    font-size: 22px !important;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 400px) {
+  #brxe-fnjwlt {
+    font-size: 18px !important;
+  }
+}
+
+/* iPhone 13 específico */
+@media screen and (max-width: 390px) {
+  #brxe-fnjwlt {
+    font-size: 50px !important;
+  }
+}
+
+/* REGRAS DE FORÇA MÁXIMA PARA MOBILE */
+@media (max-width: 390px) {
+  main#brx-content section#hero .brxe-container .brxe-block h1#brxe-fnjwlt.brxe-heading.h1.an-hero {
+    font-size: 25px !important;
+  }
+}
