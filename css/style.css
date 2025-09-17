@@ -1022,6 +1022,14 @@ body[data-image-editor-theme="dark"] .pintura-editor {
   gap: 5px;
 }
 
+/* Desktop: ampliar área de exibição do texto do vídeo (hero-3) */
+@media (min-width: 1024px) {
+  #hero-3 #brxe-btrpnk {
+    max-width: 1200px !important;
+    width: 120% !important;
+  }
+}
+
 /* Exibe logo desktop por padrão, esconde logo mobile */
 .logo-desktop {
   display: block;
