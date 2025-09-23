@@ -1160,9 +1160,9 @@ p[id="brxe-dxhcqu"] {
 
 @media (max-width: 768px) {
   .hero-mobile-img {
-    margin-top: -80px;
+    margin-top: -20px;
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
 }
 
@@ -1339,4 +1339,33 @@ section#hero.brxe-section {
   main#brx-content section#hero .brxe-container .brxe-block h1#brxe-fnjwlt.brxe-heading.h1.an-hero {
     font-size: 25px !important;
   }
+}
+#brxe-jxrrsw { margin-top: 70px; }
+
+@media (max-width: 767px) {
+	#brxe-jxrrsw {
+		margin-top: -40px;
+		margin-bottom: 30px;
+		align-self: center;
+		float: none !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		display: flex !important;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+	}
+	#brxe-bdmbli {
+		text-align: center !important;
+		margin: 0;
+		line-height: 1.2;
+	}
+	#brxe-uafmgi {
+		width: 12px !important;
+		height: 12px !important;
+		max-width: none !important;
+		flex: 0 0 auto;
+		display: inline-block;
+	}
 }
