@@ -1369,3 +1369,13 @@ section#hero.brxe-section {
 		display: inline-block;
 	}
 }
+
+@media (max-width: 767px) {
+	#brxe-fnjwlt {
+		text-align: center !important;
+		width: 100% !important;
+		display: block !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+}
